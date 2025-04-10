@@ -47,6 +47,8 @@ def receive_directory_contents(sock):
         print(f"Received and saved {filename} ({file_size} bytes)")
 
 def main():
+    print("Enter IPv4 server IP (xxx.xxx.xxx.xxx):")
+    SERVER_IP = input()
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         print(f"Connecting to {SERVER_IP}:{PORT}...")
         s.connect((SERVER_IP, PORT))
